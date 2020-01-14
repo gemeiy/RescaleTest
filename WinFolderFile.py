@@ -6,6 +6,7 @@ import time
 def OpenWin(filePath):
     pwa_app = pywinauto.application.Application()
     time.sleep(3)
+    w_handle = pywinauto.findwindows.find_windows(title='Open')[0] #, class_name='Window')[0]  ;;, visible_only=True
     try:
         pwa_app.connect(title='Open')
         window = pwa_app.window_(handle=w_handle)
